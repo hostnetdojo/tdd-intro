@@ -4,8 +4,15 @@ namespace Hostnet;
 
 class Calculadora
 {
-    public function somar($n1, $n2)
+    public function somar()
     {
-        return $n1+$n2;
+        $values = func_get_args();
+        foreach ($values as $value) {
+            if (!is_numeric($value)) {
+                return false;
+            }
+        }
+        
+        return array_sum($values);
     }
 }

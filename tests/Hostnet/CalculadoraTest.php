@@ -42,4 +42,31 @@ class CalculadoraTest extends TestCase
         # testa o resultado
         $this->assertEquals(10, $resultado);
     }
+
+    public function testVerificarNumerosNegativos(){
+
+        # Instancia a calculadora
+        $calculadora = new Calculadora();
+
+        $resultado = $calculadora->somar(-4, -10);
+        
+        $this->assertEquals(-14, $resultado);
+
+    }
+
+    public function testVerificarTexto() {
+        $calculadora = new Calculadora();
+
+        $resultado = $calculadora->somar('texto', 'quebrar');
+
+        $this->assertEquals(false, $resultado);
+    }
+
+    public function testVariosArgumentos () {
+        $calculadora = new Calculadora();
+
+        $resultado = $calculadora->somar(1, 1, 1, 1, 1);
+
+        $this->assertEquals(5, $resultado);
+    }
 }
