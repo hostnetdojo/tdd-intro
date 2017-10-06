@@ -1,16 +1,16 @@
 {
-    "require-dev": {
-        "phpunit/phpunit": "4.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Hostnet\\": [
-                "src/Hostnet",
-                "tests/Hostnet"
-            ]
-        }
-    },
-    "scripts": {
-        "test": "phpunit --colors tests"
+  "require-dev": {
+    "phpunit/phpunit": "4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hostnet\\": [
+        "src/Hostnet",
+        "tests/Hostnet"
+      ]
     }
+  },
+  "scripts": {
+    "test": "phpunit --colors tests"
+  }
 }
