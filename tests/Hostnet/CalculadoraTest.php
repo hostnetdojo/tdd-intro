@@ -3,7 +3,7 @@
 namespace Hostnet;
 
 use Hostnet\Calculadora;
-use Hostnet\Helper\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class CalculadoraTest extends TestCase
 {

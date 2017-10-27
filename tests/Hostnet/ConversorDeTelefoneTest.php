@@ -3,7 +3,7 @@
 namespace Hostnet;
 
 use Hostnet\ConversorDeTelefone;
-use Hostnet\Helper\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class ConversorDeTelefoneTest extends TestCase
 {

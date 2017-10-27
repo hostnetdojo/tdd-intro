@@ -3,7 +3,7 @@
 namespace Hostnet;
 
 use Hostnet\Anagrama;
-use Hostnet\Helper\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class AnagramaTest extends TestCase
 {
@@ -16,15 +16,17 @@ class AnagramaTest extends TestCase
         $this->assertEquals('biro', $resultado[0]);
     }
 
-    public function testNumeroDeAnagramas() {
+    public function testNumeroDeAnagramas()
+    {
         $anagrama = new Anagrama();
-        
+
         $resultado = $anagrama->getTotalDeAnagramas('biro');
-        
+
         $this->assertEquals(24, $resultado);
     }
 
-    public function testAnagramasPossiveis() {
+    public function testAnagramasPossiveis()
+    {
         $anagrama = new Anagrama();
 
         $resultado = $anagrama->geraAnagrama("ola");

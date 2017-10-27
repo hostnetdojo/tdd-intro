@@ -3,7 +3,7 @@
 namespace Hostnet;
 
 use Hostnet\FizzBuzz;
-use Hostnet\Helper\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class FizzBuzzTest extends TestCase
 {
