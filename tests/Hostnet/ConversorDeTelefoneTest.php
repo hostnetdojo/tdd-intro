@@ -7,6 +7,12 @@ use Hostnet\Helper\TestCase;
 
 class ConversorDeTelefoneTest extends TestCase
 {
+    /**
+     * Testa a conversão do caractere '1'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testRetornaUm()
     {
         $conversor = new ConversorDeTelefone();
@@ -16,6 +22,12 @@ class ConversorDeTelefoneTest extends TestCase
         $this->assertEquals('1', $resultado);
     }
 
+    /**
+     * Testa a conversão do caractere '0'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testRetornaZero()
     {
         $conversor = new ConversorDeTelefone();
@@ -25,6 +37,12 @@ class ConversorDeTelefoneTest extends TestCase
         $this->assertEquals('0', $resultado);
     }
 
+    /**
+     * Testa a conversão do caractere '-'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testRetornaHifen()
     {
         $conversor = new ConversorDeTelefone();
@@ -34,6 +52,12 @@ class ConversorDeTelefoneTest extends TestCase
         $this->assertEquals('-', $resultado);
     }
 
+    /**
+     * Testa a conversão dos caracteres 'A', 'B' e 'C'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testConverterParaDois()
     {
         $conversor = new ConversorDeTelefone();
@@ -47,101 +71,149 @@ class ConversorDeTelefoneTest extends TestCase
         $this->assertEquals(2, $resultadoC);
     }
 
+    /**
+     * Testa a conversão dos caracteres 'D', 'E' e 'F'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testConverterParaTres()
     {
         $conversor = new ConversorDeTelefone();
 
-        $resultadoA = $conversor->converte('D');
-        $resultadoB = $conversor->converte('E');
-        $resultadoC = $conversor->converte('F');
+        $resultadoD = $conversor->converte('D');
+        $resultadoE = $conversor->converte('E');
+        $resultadoF = $conversor->converte('F');
 
-        $this->assertEquals(3, $resultadoA);
-        $this->assertEquals(3, $resultadoB);
-        $this->assertEquals(3, $resultadoC);
+        $this->assertEquals(3, $resultadoD);
+        $this->assertEquals(3, $resultadoE);
+        $this->assertEquals(3, $resultadoF);
     }
 
+    /**
+     * Testa a conversão dos caracteres 'G', 'H' e 'I'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testConverterParaQuatro()
     {
         $conversor = new ConversorDeTelefone();
 
-        $resultadoA = $conversor->converte('G');
-        $resultadoB = $conversor->converte('H');
-        $resultadoC = $conversor->converte('I');
+        $resultadoG = $conversor->converte('G');
+        $resultadoH = $conversor->converte('H');
+        $resultadoI = $conversor->converte('I');
 
-        $this->assertEquals(4, $resultadoA);
-        $this->assertEquals(4, $resultadoB);
-        $this->assertEquals(4, $resultadoC);
+        $this->assertEquals(4, $resultadoG);
+        $this->assertEquals(4, $resultadoH);
+        $this->assertEquals(4, $resultadoI);
     }
 
+    /**
+     * Testa a conversão dos caracteres 'J', 'K' e 'L'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testConverterParaCinco()
     {
         $conversor = new ConversorDeTelefone();
 
-        $resultadoA = $conversor->converte('J');
-        $resultadoB = $conversor->converte('K');
-        $resultadoC = $conversor->converte('L');
+        $resultadoJ = $conversor->converte('J');
+        $resultadoK = $conversor->converte('K');
+        $resultadoL = $conversor->converte('L');
 
-        $this->assertEquals(5, $resultadoA);
-        $this->assertEquals(5, $resultadoB);
-        $this->assertEquals(5, $resultadoC);
+        $this->assertEquals(5, $resultadoJ);
+        $this->assertEquals(5, $resultadoK);
+        $this->assertEquals(5, $resultadoL);
     }
 
+    /**
+     * Testa a conversão dos caracteres 'M', 'N' e 'O'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testConverterParaSeis()
     {
         $conversor = new ConversorDeTelefone();
 
-        $resultadoA = $conversor->converte('M');
-        $resultadoB = $conversor->converte('N');
-        $resultadoC = $conversor->converte('O');
+        $resultadoM = $conversor->converte('M');
+        $resultadoN = $conversor->converte('N');
+        $resultadoO = $conversor->converte('O');
 
-        $this->assertEquals(6, $resultadoA);
-        $this->assertEquals(6, $resultadoB);
-        $this->assertEquals(6, $resultadoC);
+        $this->assertEquals(6, $resultadoM);
+        $this->assertEquals(6, $resultadoN);
+        $this->assertEquals(6, $resultadoO);
     }
 
+    /**
+     * Testa a conversão dos caracteres 'P', 'Q', 'R' e 'S'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testConverterParaSete()
     {
         $conversor = new ConversorDeTelefone();
 
-        $resultadoA = $conversor->converte('P');
-        $resultadoB = $conversor->converte('Q');
-        $resultadoC = $conversor->converte('R');
-        $resultadoD = $conversor->converte('S');
+        $resultadoP = $conversor->converte('P');
+        $resultadoQ = $conversor->converte('Q');
+        $resultadoR = $conversor->converte('R');
+        $resultadoS = $conversor->converte('S');
 
-        $this->assertEquals(7, $resultadoA);
-        $this->assertEquals(7, $resultadoB);
-        $this->assertEquals(7, $resultadoC);
-        $this->assertEquals(7, $resultadoD);
+        $this->assertEquals(7, $resultadoP);
+        $this->assertEquals(7, $resultadoQ);
+        $this->assertEquals(7, $resultadoR);
+        $this->assertEquals(7, $resultadoS);
     }
 
+    /**
+     * Testa a conversão dos caracteres 'T', 'U' e 'V'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testConverterParaOito()
     {
         $conversor = new ConversorDeTelefone();
 
-        $resultadoA = $conversor->converte('T');
-        $resultadoB = $conversor->converte('U');
-        $resultadoC = $conversor->converte('V');
+        $resultadoT = $conversor->converte('T');
+        $resultadoU = $conversor->converte('U');
+        $resultadoV = $conversor->converte('V');
 
-        $this->assertEquals(8, $resultadoA);
-        $this->assertEquals(8, $resultadoB);
-        $this->assertEquals(8, $resultadoC);
+        $this->assertEquals(8, $resultadoT);
+        $this->assertEquals(8, $resultadoU);
+        $this->assertEquals(8, $resultadoV);
     }
 
+    /**
+     * Testa a conversão dos caracteres 'W', 'X', 'Y' e 'Z'
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testConverterParaNove()
     {
         $conversor = new ConversorDeTelefone();
 
-        $resultadoA = $conversor->converte('W');
-        $resultadoB = $conversor->converte('X');
-        $resultadoC = $conversor->converte('Y');
-        $resultadoD = $conversor->converte('Z');
+        $resultadoW = $conversor->converte('W');
+        $resultadoX = $conversor->converte('X');
+        $resultadoY = $conversor->converte('Y');
+        $resultadoZ = $conversor->converte('Z');
 
-        $this->assertEquals(9, $resultadoA);
-        $this->assertEquals(9, $resultadoB);
-        $this->assertEquals(9, $resultadoC);
-        $this->assertEquals(9, $resultadoD);
+        $this->assertEquals(9, $resultadoW);
+        $this->assertEquals(9, $resultadoX);
+        $this->assertEquals(9, $resultadoY);
+        $this->assertEquals(9, $resultadoZ);
     }
 
+    /**
+     * Testa a conversão de múltiplos caracteres
+     *
+     * @covers Hostnet\ConversorDeTelefone::converte()
+     * @author Henrique Rodrigues <henrique@hostnet.com.br>
+     */
     public function testMultiplosCaracteres()
     {
         $conversor = new ConversorDeTelefone();
