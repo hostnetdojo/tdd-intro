@@ -27,7 +27,7 @@ class AnagramaTest extends TestCase
     public function testAnagramasPossiveis() {
         $anagrama = new Anagrama();
 
-        $resultado = $anagrama->geraAnagrama("luli");
+        $resultado = $anagrama->geraAnagrama("ola");
 
         $this->assertContains("ola", $resultado);
         $this->assertContains("oal", $resultado);
